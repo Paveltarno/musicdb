@@ -7,7 +7,7 @@
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active">
       <a href="#browse-artists" data-toggle="tab">
-      Browse Artists
+        Browse Artists
       </a>
     </li>
     <li role="presentation">
@@ -19,10 +19,12 @@
 
   <!-- Tab panes -->
   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="browse-artists">adgdag</div>
-    <div role="tabpanel" class="tab-pane" id="add-artists">qqq</div>
-    <div role="tabpanel" class="tab-pane" id="messages">...</div>
-    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+    <div role="tabpanel" class="tab-pane active" id="browse-artists">
+      {% include "artists/_add_artists.html" %}
+    </div>
+    <div role="tabpanel" class="tab-pane" id="add-artists">
+      qqq
+    </div>
   </div>
 
 </div>
