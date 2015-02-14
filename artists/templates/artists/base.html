@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'artists/style.css' %}" />
+    <title>{% block title %}MusicDB{% endblock %}</title>
+</head>
+
+<body>
+    <header id="header">
+        {% block header %}
+        <div class="container">
+            <h1>MusicDB</h1>
+        </div>
+      </div>
+        {% endblock %}
+    </header>
+    <div class="container" id="content">
+        <div class="row">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+
+</html>
