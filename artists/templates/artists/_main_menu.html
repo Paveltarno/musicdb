@@ -2,13 +2,15 @@
 
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active">
-      <a href="{% url 'artists:index' %}">
+    {% url 'artists:index' as url %}
+    <li role="presentation"{% if request.path == url %} class="active"{% endif %}>
+      <a href="{{url}}">
         Browse Artists
       </a>
     </li>
-    <li role="presentation">
-      <a href="{% url 'artists:new' %}">
+    {% url 'artists:new' as url %}
+    <li role="presentation"{% if request.path == url %} class="active"{% endif %}>
+      <a href="{{url}}">
         Add Artists
       </a>
     </li>

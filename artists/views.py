@@ -7,7 +7,7 @@ def index(request):
   return render(request, 'artists/index.html')
 
 def new(request):
-  return render(request, 'artists/index.html')
+  return render(request, 'artists/new.html')
 
 def create(request):
   artist_added = False
