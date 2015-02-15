@@ -1,0 +1,14 @@
+<h5>Albums</h5>
+<div class="list-group">
+  {% if albums %}
+    {% for album in albums %}
+    <div class="list-group-item">
+      <img class="list-group-item-text" src="{{ album.cover_url }}">
+  {{ album.name | title }}
+    </div>
+        
+    {% endfor %}
+  {% else %}
+    No albums to show
+  {% endif %}
+</div>

@@ -1,5 +1,22 @@
 {% extends "artists/base.html" %}
 
 {% block content %}
-
+<div class="col-md-12">
+  <h3>Browse Artists</h3>
+  {% if artists %}
+    <p class="sub-header">
+      Select an artist to view associated albums:
+    </p>
+    <div class="col-md-4">
+      {% include "artists/_artists_list.html" with artists=artists selected_artist=selected_artist %}
+    </div>
+    <div class="col-md-6">
+      {% include "artists/_albums_list.html" with albums=selected_artist.album_set.all %}
+    </div>
+  {% else %}
+    <p class="sub-header">
+      No artists found
+    </p>
+  {% endif %}
+</div>
 {% endblock %}

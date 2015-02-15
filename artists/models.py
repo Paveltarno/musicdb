@@ -1,6 +1,10 @@
 from django.db import models
 
 class Artist(models.Model):
+  class Meta:
+    # Set default order
+    ordering = ['name']
+
   name = models.CharField(max_length=200, unique=True)
   external_id = models.IntegerField(null=True)
 
@@ -32,6 +36,10 @@ class Artist(models.Model):
     #   return None
 
 class Album(models.Model):
+  class Meta:
+    # Set default order
+    ordering = ['name']
+    
   artist = models.ForeignKey(Artist)
   name = models.CharField(max_length=200)
   cover_url = models.CharField(max_length=800)

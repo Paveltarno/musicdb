@@ -1,0 +1,10 @@
+<h5>Artists</h5>
+<div class="list-group">
+  {% for artist in artists %}
+
+    <a href="{% url 'artists:index' artist.id %}" class="list-group-item {% if selected_artist and selected_artist.id == artist.id %}active{% endif %}
+    ">
+      {{ artist.name | title }}
+    </a>
+  {% endfor %}
+</div>
