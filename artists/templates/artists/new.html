@@ -1,8 +1,17 @@
 {% extends "artists/base.html" %}
 
 {% block content %}
-<div role="tabpanel">
-
-
+<div class="col-md-8">
+  <h3>Add Artist</h3>
+  <p class="sub-header">You can add an artist to the database by submitting their name in the form below:<p>
+  <form action="{% url 'artists:create' %}" method="post" class="form-inline" id="create-artist-form">
+    {% csrf_token %}
+    <div class="form-group">
+      <input name="artist_name" type="artist_name" class="form-control" placeholder="Artist Name">
+    </div>
+    <button type="submit" class="btn btn-success">Add</button>
+  </form>
+  <br />
+  <div id="create-artist-message"></div>
 </div>
 {% endblock %}

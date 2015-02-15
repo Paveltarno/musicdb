@@ -6,12 +6,14 @@
     <li role="presentation"{% if request.path == url %} class="active"{% endif %}>
       <a href="{{url}}">
         Browse Artists
+        <span class="glyphicon glyphicon-music"></span>
       </a>
     </li>
     {% url 'artists:new' as url %}
     <li role="presentation"{% if request.path == url %} class="active"{% endif %}>
       <a href="{{url}}">
-        Add Artists
+        Add Artist
+        <span class="glyphicon glyphicon-plus"></span>
       </a>
     </li>
   </ul>

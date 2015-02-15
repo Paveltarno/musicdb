@@ -1,7 +1,7 @@
 from django.db import models
 
 class Artist(models.Model):
-  name = models.CharField(max_length=200)
+  name = models.CharField(max_length=200, unique=True)
   external_id = models.IntegerField(null=True)
 
   def __str__(self):
@@ -15,6 +15,7 @@ class Artist(models.Model):
     This method does not persist the instance
     """
     # Get the unique id in the ext db
+    name = name.lower()
     external_id = external_db_adapter.search_artist_id(name)
     if external_id:
       return Artist(name=name, external_id=external_id)
