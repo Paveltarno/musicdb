@@ -6,7 +6,10 @@ import json
 def index(request):
   return render(request, 'artists/index.html')
 
-def add_artist(request, artist_name):
+def new(request):
+  return render(request, 'artists/index.html')
+
+def create(request):
   artist_added = False
 
   # Query the artist
@@ -22,3 +25,4 @@ def add_artist(request, artist_name):
 
   message = "Albums Added." if artist_added else "Artist not found."
   return HttpResponse(json.dumps({'message': message}), content_type="application/json")
+

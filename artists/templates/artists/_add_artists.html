@@ -4,7 +4,7 @@
 <p class="sub-header">
   Type the artist name and press "Add":
 </p>
-<form action="{% url 'artists:add_artist' question.id %}" method="post">
+<form action="{% url 'artists:create' %}" method="post">
 {% csrf_token %}
 {% for choice in question.choice_set.all %}
     <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />

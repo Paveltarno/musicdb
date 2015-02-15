@@ -20,6 +20,11 @@
     </header>
     <div class="container" id="content">
         <div class="row">
+            {% block menu %}
+                {% include "artists/_main_menu.html" %}
+            {% endblock %}
+        </div>
+        <div class="row">
             {% block content %}{% endblock %}
         </div>
     </div>
