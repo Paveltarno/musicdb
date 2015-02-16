@@ -8,7 +8,7 @@ https://docs.djangoproject.com/en/1.7/howto/deployment/wsgi/
 """
 
 import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings.production.py")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "musicdb.settings")
 
 # TODO: Set env vars here
 
