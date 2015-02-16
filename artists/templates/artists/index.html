@@ -10,7 +10,7 @@
     <div class="col-md-4">
       {% include "artists/_artists_list.html" with artists=artists selected_artist=selected_artist %}
     </div>
-    <div class="col-md-6">
+    <div class="col-md-8">
       {% include "artists/_albums_list.html" with albums=selected_artist.album_set.all %}
     </div>
   {% else %}
